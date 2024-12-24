@@ -55,3 +55,4 @@ pip install -r requirements.txt
 박은정, 조성준, “KoNLPy: 쉽고 간결한 한국어 정보처리 파이썬 패키지”, 제 26회 한글 및 한국어 정보처리 학술대회 논문집, 2014.
 
 ## License
+이 프로젝트는 Apache License 2.0 따릅니다. 자세한 사항은 [LICENSE](https://github.com/JIIIW/affective-software-ROTO/blob/main/LICENSE) 탭을 참고해 주세요.
