@@ -7,17 +7,21 @@
 ![Scikit-learn](https://img.shields.io/badge/Scikit-leran-F7931E?style=for-the-badge&logo=Scikit-learn&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)</br>
 ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0F9D58?style=for-the-badge&logo=Google&logoColor=white)
 ![KoNLPy](https://img.shields.io/badge/KoNLPy-cc1417?style=for-the-badge&logo=KoNLPy&logoColor=white)
 ![HuggingFace-Whisper](https://img.shields.io/badge/Whisper-FFD21E?style=for-the-badge&logo=HuggingFace&logoColor=white)
 
-## Project Structure
+## Architecture
+![frontend](https://github.com/user-attachments/assets/f0a5b92c-c70f-4276-a589-2acad2d85267)
+![backend](https://github.com/user-attachments/assets/ebf14213-4d66-44cf-8922-787838bfdb3f)
+
+## Model Workflow
+![Video2Text](https://github.com/user-attachments/assets/f96d7276-3106-4fe5-8604-0fc6a39cbfeb)
+
 
 ## Prototype Structure
-
-## Architecture
 
 ## Requirements
 Python 3.10.15 환경에서 개발을 진행했습니다.
@@ -37,7 +41,7 @@ Python 3.10.15 환경에서 개발을 진행했습니다.
 ```
 conda create -n [가상환경명] python=3.10.15
 conda activate [가상환경명]
-pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu113
+pip install -r requirements.txt
 ```
 
 ### Prototype 실행
