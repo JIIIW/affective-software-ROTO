@@ -14,11 +14,15 @@
 ![HuggingFace-Whisper](https://img.shields.io/badge/Whisper-FFD21E?style=for-the-badge&logo=HuggingFace&logoColor=white)
 
 ## Architecture
-![frontend](https://github.com/user-attachments/assets/f0a5b92c-c70f-4276-a589-2acad2d85267)
-![backend](https://github.com/user-attachments/assets/ebf14213-4d66-44cf-8922-787838bfdb3f)
+![frontend](https://github.com/user-attachments/assets/248c99da-bf88-4d86-86a3-4031c0e02f1e)
+![backend](https://github.com/user-attachments/assets/967ce862-a8e2-4164-b38f-b1e3eb47817e)
 
 ## Model Workflow
-![Video2Text](https://github.com/user-attachments/assets/f96d7276-3106-4fe5-8604-0fc6a39cbfeb)
+![Video2Text](https://github.com/user-attachments/assets/fd8015e9-b8f2-45b5-afd0-914720f3e4c2)
+![Pass Keyword](https://github.com/user-attachments/assets/7682dcc1-1a42-438b-8bd5-4be920bd0941)
+
+
+
 
 
 ## Prototype Structure
