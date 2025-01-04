@@ -26,17 +26,43 @@
 
 
 ## Prototype Structure
+![tree](https://github.com/user-attachments/assets/79a9f84c-217a-4db8-b664-b34a4948500e)
 
 ## Requirements
 Python 3.10.15 환경에서 개발을 진행했습니다.
 
 ```
-
+absl-py==2.1.0
+accelerate==1.2.1
+anyio==4.7.0
+fastapi==0.85.0
+google-auth==2.37.0
+google-auth-oauthlib==0.4.6
+h5py==3.12.1
+huggingface-hub==0.27.0
+Jinja2==3.1.5
+keras==2.11.0
+matplotlib==3.5.3
+moviepy==1.0.3
+numpy==1.26.4
+opencv-python==4.6.0.66
+pandas==2.2.3
+pydantic==1.10.19
+pydub==0.25.1
+PyPDF2==3.0.1
+python-docx==0.8.11
+scikit-learn==1.3.0
+scipy==1.15.0
+tensorflow==2.11.0
+torch==1.12.1+cu113
+torchaudio==0.12.1+cu113
+torchvision==0.13.1+cu113
+transformers==4.47.1
+uvicorn==0.18.3
 ```
 
 ## How to use Prototype
 ### 0. 가상환경 설정(타 패키지 간 충돌 방지를 위해 설치 권장)
-- Folder : **00-Conda**
 - File name : **requirements.txt**
 
 [Anaconda 환경 없을 시 다운로드](https://www.anaconda.com/download)
@@ -45,14 +71,15 @@ Python 3.10.15 환경에서 개발을 진행했습니다.
 ```
 conda create -n [가상환경명] python=3.10.15
 conda activate [가상환경명]
-pip install -r requirements.txt
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu113
 ```
+torch는 사용하는 GPU 버전에 맞춰 설치하셔야 합니다. 프로젝트에서 사용된 torch는 cu113입니다.
 
 ### Prototype 실행
-
-
-
-
+```
+gitclone https://github.com/JIIIW/affective-software-ROTO.git
+uvicorn main:app --reload
+```
 
 
 ## 📊 참고 모델 및 문헌
