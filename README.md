@@ -11,7 +11,8 @@
 ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0F9D58?style=for-the-badge&logo=Google&logoColor=white)
 ![KoNLPy](https://img.shields.io/badge/KoNLPy-cc1417?style=for-the-badge&logo=KoNLPy&logoColor=white)
-![HuggingFace-Whisper](https://img.shields.io/badge/Whisper-FFD21E?style=for-the-badge&logo=HuggingFace&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=HuggingFace&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 ## Architecture
 ![frontend](https://github.com/user-attachments/assets/248c99da-bf88-4d86-86a3-4031c0e02f1e)
