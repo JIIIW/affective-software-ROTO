@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTO ATS - 이력서 </title>
+    <link rel="stylesheet" href="assets/index.css">
+    <!-- PDF.js 라이브러리 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.15.349/pdf.min.js"></script>
+    <!-- PDF.js 워커 설정 -->
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.15.349/pdf.worker.min.js';
+    </script>
+    <!-- Mammoth.js 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <!-- Custom JavaScript 연결 -->
+    <script src="assets/index.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+            <img src="assets/images/logo.png" alt="ROTO Logo" class="logo">
+        </a> <!-- <a> 태그 닫는 부분을 추가 -->
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <p class="section-title">기능 목록</p>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="index.html" class="no-underline active">
+                        <img src="assets/images/index.png" alt="지원서류 로고" class="logo2">
+                        <span>지원서류</span>
+                    </a>
+                </li>
+                <!-- <li class="menu-item">
+                    <a href="resume_analysis.html" class="no-underline">
+                        <img src="assets/images/resume.png" alt="이력서 분석 로고" class="logo2">
+                        <span>이력서 분석</span>
+                    </a>
+                </li> -->
+                <li class="menu-item">
+                    <a href="analysis_report.html" class="no-underline">
+                        <img src="assets/images/report.png" alt="결과보고서 로고" class="logo2">
+                        <span>결과 보고서</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Resume Upload Section -->
+            <section class="resume-upload">
+                <h2>이력서 업로드</h2>
+                <div class="upload-box">
+                    <label for="resume-upload-input">이력서를 업로드하세요</label>
+                    <input type="file" id="resume-upload-input" accept=".pdf, .docx">
+                </div>
+                <p class="upload-info">PDF, DOCX 파일 형식을 지원합니다.</p>
+            </section>
+
+            <!-- Toolbar Section -->
+            <div class="toolbar">
+                <button id="zoom-in" class="toolbar-btn">
+                    <img src="assets/images/zoomin.png" alt="확대">
+                </button>
+                <button id="zoom-out" class="toolbar-btn">
+                    <img src="assets/images/zoomout.png" alt="축소">
+                </button>
+                <button id="prev-page" class="toolbar-btn">
+                    <img src="assets/images/previouspage.png" alt="이전 페이지">
+                </button>
+                <button id="next-page" class="toolbar-btn">
+                    <img src="assets/images/nextpage.png" alt="다음 페이지">
+                </button>
+            </div>
+
+            <!-- Resume Preview Section -->
+            <section class="resume-preview-section">
+                <h2>이력서 미리보기</h2>
+                <div class="resume-preview">
+                    <canvas id="pdf-canvas"></canvas>
+                </div>
+
+                <div id="page-info-wrapper">
+                    <span id="page-info">1 / 1</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="analyze-btn">분석 시작</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 로딩 팝업 -->
+    <div id="loading-popup" class="loading-popup">
+        <div class="loading-content">
+            <p>분석 중... 잠시만 기다려 주세요.</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

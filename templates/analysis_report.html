@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTO ATS - 결과 보고서</title>
+    <link rel="stylesheet" href="assets/analysis_report.css">
+    <script src="assets/analysis_report.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="ROTO Logo" class="logo">
+        </a>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <p class="section-title">기능 목록</p>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="index.html" class="no-underline">
+                        <img src="assets/images/index.png" alt="지원서류 로고" class="logo2">
+                        <span>지원서류</span>
+                    </a>
+                </li>
+                <!-- <li class="menu-item">
+                    <a href="resume_analysis.html" class="no-underline">
+                        <img src="assets/images/resume.png" alt="이력서 분석 로고" class="logo2">
+                        <span>이력서 분석</span>
+                    </a>
+                </li> -->
+                <li class="menu-item">
+                    <a href="analysis_report.html" class="no-underline active">
+                        <img src="assets/images/report.png" alt="결과보고서 로고" class="logo2">
+                        <span>결과 보고서</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section class="report-content">
+                <h2 class="main-title">인사이트 보고서</h2>
+
+                <div class="report-box-wrapper">
+                    <div class="report-box">
+                        <!-- 보고서 헤더 -->
+                        <section class="report-header">
+                            <div class="header-banner">
+                                <img src="assets/images/logo2.png" alt="ROTO Logo" class="logo">
+                                <p class="banner-title">[AI 기반 채용 솔루션 / Resume Analysis Report] 인재 채용 결과 보고서</p>
+                            </div>
+                        </section>
+
+                        <!-- 지원자 정보 -->
+                        <div class="applicant-info">
+                            <div class="info">
+                                <p class="applicant-name">
+                                    <strong id="applicantName">[이름 로딩 중]</strong>
+                                    <span id="recommendation" class="recommendation">[추천 상태 로딩 중]</span>
+                                </p>
+                                <p class="applicant-details">
+                                    <span class="highlight">지원자 ID</span>
+                                    <span id="applicantId">[ID 로딩 중]</span>
+                                    &nbsp;&nbsp;&nbsp;|
+                                    <span class="highlight">지원직군 · 직무</span>
+                                    <span id="applicantPosition">[직무 로딩 중]</span>
+                                    &nbsp;&nbsp;&nbsp;|
+                                    <span class="highlight">응시 지역</span>
+                                    <span id="applicantLocation">[지역 로딩 중]</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 종합 점수 분포 -->
+                        <section class="score-summary">
+                            <h2 class="main-title">종합 점수 분포</h2>
+                            <div class="score-card-container">
+                                <!-- 전체 지원자 -->
+                                <div class="score-card">
+                                    <div class="score-header">전체 지원자</div>
+                                    <div class="score-body">
+                                        <div class="score-grade" id="allGrade"></div>
+                                        <div class="score-details">
+                                            <p id="allRank">[랭킹 로딩 중]</p>
+                                            <p id="allPercent">[퍼센트 로딩 중]</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 지원직군 · 직무 -->
+                                <div class="score-card">
+                                    <div class="score-header">지원직군 · 직무</div>
+                                    <div class="score-body">
+                                        <div class="score-grade" id="jobGrade"></div>
+                                        <div class="score-details">
+                                            <p id="jobRank">[랭킹 로딩 중]</p>
+                                            <p id="jobPercent">[퍼센트 로딩 중]</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 경력 적합도 -->
+                                <div class="score-card">
+                                    <div class="score-header">경력 적합도</div>
+                                    <div class="score-body">
+                                        <div class="score-grade" id="experienceGrade"></div>
+                                        <div class="score-details">
+                                            <p id="experienceMatch">[적합도 로딩 중]</p>
+                                            <p id="experiencePercent">[퍼센트 로딩 중]</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 기술 역량 -->
+                                <div class="score-card">
+                                    <div class="score-header">기술 역량</div>
+                                    <div class="score-body">
+                                        <div class="score-grade" id="skillGrade"></div>
+                                        <div class="score-details">
+                                            <p id="skillScore">[점수 로딩 중]</p>
+                                            <p id="skillPercent">[퍼센트 로딩 중]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 직무 적합도 · 조직 문화 적합도 · 역량 분석 -->
+                        <section class="analysis-section">
+                            <div class="analysis-container"> <!-- 가로로 나열되도록 설정 -->
+
+                                <!-- 직무 적합도 -->
+                                <div class="analysis-box">
+                                    <h3 class="analysis-title">직무 적합도</h3>
+                                    <div class="job-fit-container">
+                                        <!-- 백엔드 개발 -->
+                                        <div id="backend-item" class="job-fit-item">
+                                            <span class="job-title">로딩 중</span>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 0%;"></div>
+                                                </div>
+                                                <span class="job-score">0%</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- 프론트엔드 개발 -->
+                                        <div id="frontend-item" class="job-fit-item">
+                                            <span class="job-title">로딩 중</span>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 0%; background-color: #6c757d;">
+                                                    </div>
+                                                </div>
+                                                <span class="job-score">0%</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- 데이터 엔지니어링 -->
+                                        <div id="data-engineer-item" class="job-fit-item">
+                                            <span class="job-title">로딩 중</span>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar">
+                                                    <div class="progress" style="width: 0%; background-color: #6c757d;">
+                                                    </div>
+                                                </div>
+                                                <span class="job-score">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 조직 문화 적합도 -->
+                                <div class="analysis-box2">
+                                    <h3 class="analysis-title2">조직 문화 적합도</h3>
+                                    <div class="job-fit-container2">
+                                        <div class="job-fit-item2">
+                                            <span class="job-title2">기술 역량</span>
+                                            <div class="progress-bar-container2">
+                                                <div class="progress-bar2">
+                                                    <div class="progress2" style="width: 0%;"></div>
+                                                </div>
+                                                <span class="job-score2">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="job-fit-item2">
+                                            <span class="job-title2">애자일 협업 능력</span>
+                                            <div class="progress-bar-container2">
+                                                <div class="progress-bar2">
+                                                    <div class="progress2" style="width: 0%;"></div>
+                                                </div>
+                                                <span class="job-score2">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="job-fit-item2">
+                                            <span class="job-title2">문제 해결 능력</span>
+                                            <div class="progress-bar-container2">
+                                                <div class="progress-bar2">
+                                                    <div class="progress2" style="width: 0%;"></div>
+                                                </div>
+                                                <span class="job-score2">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="job-fit-item2">
+                                            <span class="job-title2">창의적 사고</span>
+                                            <div class="progress-bar-container2">
+                                                <div class="progress-bar2">
+                                                    <div class="progress2" style="width: 0%;"></div>
+                                                </div>
+                                                <span class="job-score2">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 역량 분석 -->
+                                <div class="analysis-box">
+                                    <h3 class="analysis-title">역량 분석</h3>
+                                    <div class="analysis-content">
+                                        <!-- 레이더 차트를 위한 캔버스 -->
+                                        <img id="radarChartImage" src="" alt="역량 분석 차트"
+                                            style="width: 100%; height: auto;">
+                                    </div>
+                                    <!-- <canvas id="radarChart"></canvas>
+                                    </div>
+                                </div> -->
+                        </section>
+
+                        <section class="final-summary-section">
+                            <div class="final-summary-container">
+                                <!-- 결론 및 최종 의견 제목 -->
+                                <h3 class="final-summary-title">결론 및 최종 의견</h3>
+
+                                <div class="summary-content">
+                                    <!-- 점수 요약 테이블 -->
+                                    <div class="score-summary-table">
+                                        <table>
+                                            <tr>
+                                                <td class="highlight">종합 점수</td>
+                                                <td id="finalOverallScore">로딩 중</td>                                            </tr>
+                                            <tr>
+                                                <td class="highlight">직무 적합도</td>
+                                                <td id="finalJobFit">로딩 중</td>                                            </tr>
+                                            <tr>
+                                                <td class="highlight">조직 문화 적합도</td>
+                                                <td id="finalCultureFit">로딩 중</td>                                            </tr>
+                                            <tr>
+                                                <td class="highlight">기술 역량</td>
+                                                <td id="finalSkillScore">로딩 중</td>                                            </tr>
+                                            <tr>
+                                                <td class="highlight">종합 평가</td>
+                                                <td id="finalRecommendation">로딩 중</td>                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <!-- 의견 및 분석 -->
+                                    <div class="final-opinion" id="finalOpinionContainer">
+                                        <p id="finalOpinionText">로딩 중</p>
+
+                                        <h4>주요 강점</h4>
+                                        <ul id="strengthsList">
+                                            <!-- 강점 항목이 동적으로 추가됩니다 -->
+                                        </ul>
+
+                                        <h4>보완점</h4>
+                                        <p id="improvementPoint">로딩 중</p>
+
+                                        <h4>채용 추천: <span id="finalHireRecommendation" class="highlight">로딩 중</span></h4>
+                                        <p id="finalHireReason">로딩 중</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            <div class="download-section">
+                <button id="downloadButton">인사이트 보고서 다운로드</button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

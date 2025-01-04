@@ -1,0 +1,577 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9; /* 배경색 설정 */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    min-height: 100vh; /* 컨테이너 높이를 화면 전체로 설정 */
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    justify-content: space-between; /* 로고와 네비게이션 간 간격 설정 */
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid lightgray; /* 헤더 하단 테두리 */
+    height: 55px;  /* 헤더의 높이 설정 */
+}
+
+/* 로고 크기 조정 및 위치 내리기 */
+.header .logo {
+    height: 50px; /* 로고 크기 설정 */
+    margin-top: 10px; /* 로고 위치를 아래로 내리기 */
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    display: flex;
+    gap: 20px; /* 탭 간 간격 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 링크 스타일 */
+.nav-tabs a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333; /* 기본 텍스트 색상 */
+    font-weight: normal; /* 기본 상태에서 볼드체를 제거 */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+}
+
+.nav-tabs a:hover {
+    background-color: #f0f0f0; /* 탭 Hover 시 배경색 */
+}
+
+.nav-tabs a.active {
+    background-color: #e6f3ff; /* 활성화된 탭 배경색 */
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 13%; /* 사이드바 너비 */
+    background-color: #ffffff; /* 배경색 */
+    padding: 20px;
+    border-right: 1px solid #e0e0e0; /* 오른쪽 테두리 */
+}
+
+/* 사이드바 제목 */
+.sidebar .section-title {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px; /* 제목 하단 여백 */
+    text-transform: uppercase; /* 대문자 변환 */
+}
+
+/* 사이드바 메뉴 */
+.menu {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 수직 정렬 */
+    gap: 10px; /* 아이콘과 텍스트 간 간격 */
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    transition: background-color 0.3s ease; /* Hover 전환 효과 */
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5; /* Hover 시 배경색 */
+    border-radius: 5px; /* Hover 시 모서리 둥글게 */
+}
+
+.logo2 {
+    width: 20px; /* 아이콘 너비 */
+    height: 20px; /* 아이콘 높이 */
+    object-fit: contain; /* 아이콘 비율 유지 */
+}
+
+/* 사이드바 링크 스타일 변경 */
+.sidebar .menu-item a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 링크 기본 텍스트 색상 */
+    font-weight: normal; /* 기본 상태에서 볼드체를 제거 */
+}
+
+.sidebar .menu-item a.active {
+    font-weight: bold; /* 활성화된 링크에만 볼드체 적용 */
+}
+
+.sidebar .menu-item a:hover {
+    color: #007bff; /* 링크 Hover 시 색상 변경 */
+}
+
+/* 전체 배경 박스 */
+.report-box-wrapper {
+    background-color: #f1f1f1; /* 연한 회색 배경 */
+    padding: 20px;
+    /* border-radius: 10px; */
+    margin-bottom: 20px;
+}
+
+/* Main Content 스타일 */
+.content {
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+}
+
+.report-content {
+    margin: 20px;
+}
+
+.report-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* 인사이트 보고서 - header */
+.report-header {
+    background-color: #2e3d86; /* 파란색 배경 */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.report-header .header-banner {
+    display: flex;
+    align-items: center; /* 로고와 텍스트 수직 정렬 */
+    gap: 50px; /* 로고와 텍스트 간 간격 */
+    padding-left: 15px;
+}
+
+.header-banner .logo {
+    width: 100px !important; /* 너비 설정 */
+    height: auto !important; /* 높이는 비율 유지 */
+    max-height: 40px !important; /* 최대 높이 설정 */
+    display: block !important; /* 확실히 적용 */
+}
+
+.header-banner .banner-title {
+    font-size: 1.4rem; /* 폰트 크기 증가 */
+    font-weight: bold; /* 글씨 두께 조정 */
+    margin: 0;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    color: #ffffff; /* 흰색 글자 */
+}
+
+/* 지원자 정보 */
+.applicant-info {
+    margin-top: 20px;
+    padding: 15px;
+    /* background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.applicant-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.recommendation {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.applicant-details {
+    font-size: 1rem;
+    color: #333; /* 기본 글자 색상 */
+    display: flex;
+    flex-wrap: wrap; /* 필요 시 줄바꿈 */
+    gap: 10px; /* 요소 간 간격 */
+    align-items: center;
+}
+
+.applicant-details .highlight {
+    color: #007bff; /* 강조 텍스트 색상 */
+    font-weight: bold; /* 강조 텍스트 볼드 */
+}
+
+/* 종합 점수 분포 스타일 */
+.main-title {
+    margin-bottom: 10px; /* 글자 아래 여백을 줄임 */
+}
+
+.score-summary {
+    /* margin-top: 10px; */
+    padding: 20px;
+    background-color: #f9f8f8; /* 색 고침 */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    margin-top: -10px; /* 박스 위 여백을 줄임 */
+    padding-top: 2px; /* 필요 시 내부 패딩 조정 */
+    border: 2px solid #e0e0e0;
+    margin-bottom: 30px; /* 아래 섹션과 간격 추가 */
+}
+
+.score-card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.score-card {
+    flex: 1;
+    max-width: 23%;
+    background-color: #fff;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.score-header {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.0rem;
+    padding: 8px;
+}
+
+.score-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.score-grade {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #e6f3ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* 직무 적합도 · 조직 문화 적합도 · 역량 분석 */
+
+/* 박스 컨테이너 */
+.analysis-container {
+    display: flex;
+    gap: 20px; /* 박스 간 간격 */
+    justify-content: space-between; /* 박스를 동일 간격으로 정렬 */
+    margin-top: 20px; /* 20px 간격 추가 */
+}
+
+/* 분석 박스 */
+.analysis-box {
+    flex: 1; /* 박스가 동일한 비율로 확장 */
+    background-color: #f9f8f8;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내용 간 균등 간격 */
+    height: 350px; /* 고정된 높이 설정 */
+    min-width: 250px; /* 고정된 최소 너비 설정 */
+}
+
+/* 제목 스타일 */
+.analysis-title {
+    margin-top: 0px; /* 박스 위 여백을 줄임 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* 제목 텍스트 색상 */
+}
+
+
+/* 박스 컨테이너 */
+.analysis-container2 {
+    display: flex;
+    gap: 20px; /* 박스 간 간격 */
+    justify-content: space-between; /* 박스를 동일 간격으로 정렬 */
+    margin-top: 20px; /* 20px 간격 추가 */
+}
+
+/* 분석 박스 */
+.analysis-box2 {
+    flex: 1; /* 박스가 동일한 비율로 확장 */
+    background-color: #f9f8f8;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내용 간 균등 간격 */
+    height: 350px; /* 고정된 높이 설정 */
+    min-width: 250px; /* 고정된 최소 너비 설정 */
+}
+
+/* 제목 스타일 */
+.analysis-title2 {
+    margin-top: 0px; /* 박스 위 여백을 줄임 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* 제목 텍스트 색상 */
+}
+
+/* 각 항목에 고유 ID를 사용해 개별 스타일링 가능 */
+
+/* 백엔드 개발 항목 */
+#backend-item {
+    margin-bottom: 20px; /* 간격 조정 */
+    position: relative;
+}
+
+/* 프론트엔드 개발 항목 */
+#frontend-item {
+    margin-bottom: 20px; /* 간격 조정 */
+    position: relative;
+    top: 10px; /* 위치 조정 */
+}
+
+/* 데이터 엔지니어링 항목 */
+#data-engineer-item {
+    margin-bottom: 20px; /* 간격 조정 */
+    position: relative;
+    top: 15px; /* 위치 조정 */
+}
+
+/* 컨테이너 스타일 */
+.job-fit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 항목 간 간격 */
+}
+
+/* 각 항목 */
+.job-fit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* 제목과 바 간 간격 */
+}
+
+/* 제목 스타일 */
+.job-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* 진행 바와의 간격 */
+}
+
+/* 진행 바 컨테이너 */
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 진행 바와 점수 간격 */
+}
+
+/* 진행 바 스타일 */
+.progress-bar {
+    flex: 1;
+    height: 20px; /* 바 높이 */
+    background-color: #f0f0f0; /* 바 배경색 */
+    border-radius: 10px; /* 둥근 모서리 */
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%; /* 진행 바 높이 */
+    background-color: #007bff; /* 진행 색상 */
+    border-radius: 5px; /* 둥근 모서리 */
+    transition: width 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 점수 스타일 */
+.job-score {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* 점수 줄바꿈 방지 */
+}
+
+
+/* 컨테이너 스타일 */
+.job-fit-container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 항목 간 간격 */
+}
+
+/* 각 항목 */
+.job-fit-item2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* 제목과 바 간 간격 */
+}
+
+/* 제목 스타일 */
+.job-title2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* 진행 바와의 간격 */
+}
+
+/* 진행 바 컨테이너 */
+.progress-bar-container2 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 진행 바와 점수 간격 */
+}
+
+/* 진행 바 스타일 */
+.progress-bar2 {
+    flex: 1;
+    height: 20px; /* 바 높이 */
+    background-color: #f0f0f0; /* 바 배경색 */
+    border-radius: 10px; /* 둥근 모서리 */
+    overflow: hidden;
+    position: relative;
+}
+
+.progress2 {
+    height: 100%; /* 진행 바 높이 */
+    background-color: #007bff; /* 진행 색상 */
+    border-radius: 5px; /* 둥근 모서리 */
+    transition: width 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 점수 스타일 */
+.job-score2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* 점수 줄바꿈 방지 */
+}
+
+
+/* 결론 및 최종 의견 스타일 */
+.final-summary-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.final-summary-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.summary-content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.score-summary-table {
+    flex: 1;
+    margin-bottom: 30px; /* 테이블과 글씨 사이 간격 */
+}
+
+.score-summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score-summary-table td {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    text-align: left;
+}
+
+.score-summary-table .highlight {
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    text-align: center;
+}
+
+.final-opinion {
+    flex: 2;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: -20px;
+}
+
+.final-opinion h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.final-opinion ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-top: -5px;
+}
+
+.final-opinion p {
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+
+.final-opinion .highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Download Section */
+.download-section button {
+    background-color: #007bff; /* 기본 배경색 */
+    color: white; /* 글자 색상 */
+    padding: 12px 24px; /* 버튼 패딩 증가로 더 큰 버튼 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    font-size: 1rem; /* 글자 크기 설정 */
+    transition: background-color 0.3s, transform 0.2s; /* 부드러운 전환 효과 */
+}
+
+.download-section button:hover {
+    background-color: #0056b3; /* 호버 시 어두운 배경색 */
+    transform: scale(1.05); /* 버튼을 살짝 확대 */
+}
+
+.download-section button:active {
+    background-color: #003f7f; /* 클릭 시 더 어두운 배경색 */
+    transform: scale(1); /* 클릭 시 원래 크기로 */
+}

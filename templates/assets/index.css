@@ -1,0 +1,318 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9; /* 배경색 설정 */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    min-height: 100vh; /* 컨테이너 높이를 화면 전체로 설정 */
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    justify-content: space-between; /* 로고와 네비게이션 간 간격 설정 */
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid lightgray; /* 헤더 하단 테두리 */
+    height: 55px;  /* 헤더의 높이 설정 */
+}
+
+/* 로고 크기 조정 및 위치 내리기 */
+.header .logo {
+    height: 50px; /* 로고 크기 설정 */
+    margin-top: 10px; /* 로고 위치를 아래로 내리기 */
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    display: flex;
+    gap: 20px; /* 탭 간 간격 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 링크 스타일 */
+.nav-tabs a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333; /* 기본 텍스트 색상 */
+    font-weight: normal; /* 기본 상태에서 볼드체를 제거 */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
+}
+
+.nav-tabs a:hover {
+    background-color: #f0f0f0; /* 탭 Hover 시 배경색 */
+}
+
+.nav-tabs a.active {
+    background-color: #e6f3ff; /* 활성화된 탭 배경색 */
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 13%; /* 사이드바 너비 */
+    background-color: #ffffff; /* 배경색 */
+    padding: 20px;
+    border-right: 1px solid #e0e0e0; /* 오른쪽 테두리 */
+}
+
+.sidebar .section-title {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px; /* 제목 하단 여백 */
+    text-transform: uppercase; /* 대문자 변환 */
+}
+
+/* 사이드바 메뉴 */
+.menu {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 수직 정렬 */
+    gap: 10px; /* 아이콘과 텍스트 간 간격 */
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    transition: background-color 0.3s ease; /* Hover 전환 효과 */
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5; /* Hover 시 배경색 */
+    border-radius: 5px; /* Hover 시 모서리 둥글게 */
+}
+
+.logo2 {
+    width: 20px; /* 아이콘 너비 */
+    height: 20px; /* 아이콘 높이 */
+    object-fit: contain; /* 아이콘 비율 유지 */
+}
+
+/* 사이드바 링크 스타일 변경 */
+.sidebar .menu-item a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 링크 기본 텍스트 색상 */
+    font-weight: normal; /* 기본 상태에서 볼드체를 제거 */
+}
+
+.sidebar .menu-item a.active {
+    font-weight: bold; /* 활성화된 링크에만 볼드체 적용 */
+}
+
+.sidebar .menu-item a:hover {
+    color: #007bff; /* 링크 Hover 시 색상 변경 */
+}
+
+/* Main Content */
+.content {
+    flex: 1; /* 컨테이너의 남은 영역 차지 */
+    padding: 20px;
+}
+
+/* Resume Upload Section */
+.resume-upload {
+    background: #fff; /* 업로드 영역 배경색 */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px; /* 섹션 간 여백 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 업로드 버튼 가운데 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    padding: 20px;
+    border: 2px dashed #007bff; /* 점선 테두리 */
+    border-radius: 10px;
+    background: #f9f9f9;
+    transition: background 0.3s ease; /* Hover 배경색 전환 */
+}
+
+
+.upload-box:hover {
+    background: #e6f3ff; /* Hover 시 배경색 */
+}
+
+
+.upload-btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* 버튼 배경색 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s; /* Hover 전환 효과 */
+}
+
+.upload-btn:hover {
+    background-color: #0056b3; /* Hover 시 배경색 */
+}
+
+
+.upload-info {
+    font-size: 0.85rem; /* 안내문 글꼴 크기 */
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Resume Preview Section */
+.resume-preview-section {
+    background: #fff; /* 미리보기 영역 배경색 */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px; /* 미리보기 하단 여백 추가 */
+}
+
+.resume-preview {
+    border: 1px solid #e0e0e0; /* 테두리 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden; /* 컨테이너를 벗어나는 내용 숨김 */
+    height: auto; /* PDF 높이를 자동으로 설정 */
+    min-height: 600px; /* 최소 높이 설정 */
+}
+
+.resume-preview canvas {
+    max-width: 100%; /* PDF를 부모 크기에 맞춤 */
+    height: auto; /* 비율 유지 */
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: left; /* 버튼을 중앙 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.action-buttons .analyze-btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* 버튼 배경색 */
+    color: white;
+    border: none;
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s; /* Hover 전환 효과 */
+}
+
+.action-buttons .analyze-btn:hover {
+    background-color: #0056b3; /* Hover 시 배경색 */
+}
+
+/* Toolbar Section */
+.toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px; /* 툴바와 미리보기 사이의 간격 */
+}
+
+.toolbar button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.toolbar button img {
+    width: 20px; /* 버튼 내 아이콘 크기 */
+    height: 20px;
+}
+
+.toolbar button:hover {
+    background-color: #007bff;
+    border-color: #0056b3;
+    color: white;
+}
+
+/* 로딩 팝업 스타일 */
+.loading-popup {
+    display: none; /* 기본적으로 숨겨놓기 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+    color: white;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    z-index: 9999; /* 다른 요소보다 위에 표시 */
+}
+
+.loading-content {
+    text-align: center;
+}
+
+/* 텍스트 스타일 */
+.loading-content p {
+    font-size: 1.5rem; /* 텍스트 크기 */
+    margin-bottom: 10px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+/* Loading popup 스타일 */
+#loading-popup {
+    position: fixed; /* 화면에 고정 위치 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+    display: none; /* 기본적으로 숨김 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    z-index: 9999; /* 다른 요소 위에 표시 */
+}
+
+#loading-popup .popup-content {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#loading-popup .popup-content img {
+    width: 50px; /* 로딩 아이콘 크기 조정 */
+    height: 50px; /* 로딩 아이콘 크기 조정 */
+    margin-bottom: 10px; /* 메시지와 아이콘 사이 간격 */
+}
+
+/* Page Info Section */
+#page-info-wrapper {
+    text-align: center;
+    margin-top: 10px; /* 페이지 정보와 미리보기 사이 간격 */
+}
+
+#page-info {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 링크 스타일: 자연스럽게 하이퍼링크 보이게 하기 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 색상 상속 */
+}
+
+a:hover {
+    background-color: #f0f0f0; /* hover시 배경색 */
+    text-decoration: none; /* hover 시 밑줄 제거 */
+}
