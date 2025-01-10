@@ -1,6 +1,6 @@
 # 효과적인 인재 채용을 위한 소프트웨어, ROTO
 ### 대량 지원서 처리의 어려움을 해소하고 기술 역량, 조직 적합성을 고려한 우수 인재를 선별함으로써 효과적인 인재 채용을 지원하고자 프로젝트를 진행했습니다.
-[ROTO Project Full Story]()
+[ROTO Project Full Story](https://www.behance.net/gallery/216485353/-ROTO)
 
 ## 🛠 Stack
 
@@ -15,19 +15,21 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 ## Architecture
+
 ![frontend](https://github.com/user-attachments/assets/248c99da-bf88-4d86-86a3-4031c0e02f1e)
 ![backend](https://github.com/user-attachments/assets/967ce862-a8e2-4164-b38f-b1e3eb47817e)
 
+
 ## Model Workflow
+
 ![Video2Text](https://github.com/user-attachments/assets/fd8015e9-b8f2-45b5-afd0-914720f3e4c2)
 ![Pass Keyword](https://github.com/user-attachments/assets/7682dcc1-1a42-438b-8bd5-4be920bd0941)
 
 
-
-
-
 ## Prototype Structure
+
 ![tree](https://github.com/user-attachments/assets/79a9f84c-217a-4db8-b664-b34a4948500e)
+
 
 ## Requirements
 Python 3.10.15 환경에서 개발을 진행했습니다.
