@@ -30,6 +30,8 @@
 
 ![tree](https://github.com/user-attachments/assets/79a9f84c-217a-4db8-b664-b34a4948500e)
 
+## Prototype Execution Video
+![Prototype](ROTO_ATS_Prototype.gif)
 
 ## Requirements
 Python 3.10.15 환경에서 개발을 진행했습니다.
